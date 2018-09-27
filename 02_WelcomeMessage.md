@@ -1,4 +1,4 @@
-# ウェルカムメッセージの実装
+# 2. ウェルカムメッセージの実装
 
 ユーザーがボットにアクセスしたときに、ボットから挨拶をする実装を行います。
 
@@ -120,4 +120,4 @@ ILogger logger = _loggerFactory.CreateLogger<SampleBot>();
 
 次は、メッセージのやり取りの実装を行います。
 
-[Back](01_Create_Project.md) | [Next](02_WelcomeMessage.md)
+[Back](01_Create_Project.md) | [Next](03_Basic_State_Management.md)
