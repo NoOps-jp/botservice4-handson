@@ -228,11 +228,11 @@ private async Task GetHandleNameAsync(DialogContext dialogContext, DialogTurnRes
 }
 ```
 
-2 つめは、`SendConversationAsync` メソッドで、ハンドルネームが登録済み、かつ、ダイアログのステート（ `dialogTurnResult.Status` ）が `Empty` の時です。
+2 つめは、`SendMessageActivityAsync` メソッド内で、ハンドルネームが登録済み、かつ、ダイアログのステート（ `dialogTurnResult.Status` ）が `Empty` の時です。
 `SendConversationAsync` の全体像は以下になります。
 
 ```cs
-public async Task SendConversationAsync(ITurnContext turnContext, CancellationToken cancellationToken)
+public async Task SendMessageActivityAsync(ITurnContext turnContext, CancellationToken cancellationToken)
 {
     var dialogContext = await _dialogs.CreateContextAsync(turnContext, cancellationToken);
     var dialogTurnResult = await dialogContext.ContinueDialogAsync(cancellationToken);
