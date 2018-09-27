@@ -6,7 +6,7 @@
 
 まず、この後ハンズオンの流れで利用するボットのクラスを作成します。
 
-### SimpleBot クラスの実装
+### SampleBot クラスの実装
 
 VS2017 にてプロジェクト名を右クリック > 「追加」 > 「新しいフォルダー」をクリックします。
 
@@ -14,7 +14,7 @@ VS2017 にてプロジェクト名を右クリック > 「追加」 > 「新し�
 
 フォルダー名は、「SampleBot」とします。
 
-フォルダーを作成したら、フォルダーを右クリック > 「追加」 > 「クラス」を選択します。クラス名は「SimpleBot」とします。
+フォルダーを作成したら、フォルダーを右クリック > 「追加」 > 「クラス」を選択します。クラス名は「SampleBot」とします。
 
 実装は以下となります。
 
@@ -31,14 +31,14 @@ namespace HandsonBot.SampleBot
 {
     public class SampleBot : IBot
     {
-        private const string WelcomeText = "SimpleBot へようこそ！";
+        private const string WelcomeText = "SampleBot へようこそ！";
 
         private readonly ILogger _logger;
 
         public SampleBot(ILoggerFactory loggerFactory)
         {
             _logger = loggerFactory.CreateLogger<SampleBot>();
-            _logger.LogInformation("Start SimpleBot");
+            _logger.LogInformation("Start SampleBot");
         }
 
         public async Task OnTurnAsync(ITurnContext turnContext, CancellationToken cancellationToken = default(CancellationToken))
