@@ -149,7 +149,7 @@ namespace HandsonBot.SampleBot
 {
     public class SampleBot : IBot
     {
-        private const string WelcomeText = "SimpleBot へようこそ！";
+        private const string WelcomeText = "SampleBot へようこそ！";
 
         private readonly ILogger _logger;
         private readonly SampleBotAccessors _accessors; // Added
@@ -163,7 +163,7 @@ namespace HandsonBot.SampleBot
             _dialogs.Add(new TextPrompt("name")); // Added
 
             _logger = loggerFactory.CreateLogger<SampleBot>();
-            _logger.LogInformation("Start SimpleBot");
+            _logger.LogInformation("Start SampleBot");
         }
 
         public async Task OnTurnAsync(ITurnContext turnContext, CancellationToken cancellationToken = default(CancellationToken))

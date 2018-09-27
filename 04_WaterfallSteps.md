@@ -190,7 +190,7 @@ public SampleBot(SampleBotAccessors accessors, ILoggerFactory loggerFactory)
     _dialogs.Add(new WaterfallDialog("details", waterfallSteps));
 
     _logger = loggerFactory.CreateLogger<SampleBot>();
-    _logger.LogInformation("Start SimpleBot");
+    _logger.LogInformation("Start SampleBot");
 }
 ```
 
@@ -263,6 +263,4 @@ public async Task SendConversationAsync(ITurnContext turnContext, CancellationTo
 
 今回のハンズオンは、これで終了です。
 
-
 [Back](03_Basic_State_Management.md) | [Summary](99_Summary.md)
-
