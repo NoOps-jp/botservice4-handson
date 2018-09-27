@@ -4,7 +4,9 @@
 
 このハンズオンでは、以下を理解することをゴールとしています。
 
-> TODO
+- プロジェクト構成の理解
+- ステート管理の基本
+- WaterfallStep による会話フローの基本
 
 ## 前提
 
@@ -21,12 +23,11 @@
 
 - https://azure.microsoft.com/ja-jp/updates/microsoft-bot-framework-v4-sdk-is-now-generally-available/
 
-新しくなった Bot Framework による基本機能紹介のハンズオンとなります。
+新しくなった Bot Framework による基本機能のハンズオンとなります。
 
-以下図の会話フローを元に、基本機能を学びます。
+以下図の会話フローの実装を元に、基本機能を学びます。
 
 ![image](images/flow.png)
-
 
 ## ハンズオンの構成
 
@@ -35,7 +36,6 @@
 | [00_Preparation.md](./00_Preparation.md)                    | 開発に必要な環境を準備します。                                                                           |
 | [01_Create_Project.md](./01_Create_Project.md)              | プロジェクトテンプレートからプロジェクトを作成し、プロジェクトの構成やデバッグでの実行方法を確認します。 |
 | [02_WelcomeMessage](./02_WelcomeMessage.md)                 | ウェルカムメッセージの表示を実装します。                                                                 |
-| [03_SimplePrompt](./03_SimplePrompt.md)                     | シンプルな Prompt の実装をします。                                                                       |
-| [04_Implement_SimplePrompt](./04_Implement_SimplePrompt.md) |                                                                                                          |
-| [05_Implement_MultiPrompt](./05_Implement_MultiPrompt.md)   |                                                                                                          |
-| 06\_                                                        |                                                                                                          |
+| [03_Basic_State_Management](./03_Basic_State_Management.md) | ステート管理と、シンプルな Prompt の実装をします。                                                       |
+| [04_WaterfallSteps](./04_WaterfallSteps.md)                 | WaterfallStep による会話フローの実装をします。                                                           |
+| [Summary](./99_Summary.md)                                  | 本ハンズオンのまとめ。                                                                                   |
