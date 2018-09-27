@@ -56,7 +56,7 @@ private async Task<DialogTurnResult> ConfirmAgeStepAsync(WaterfallStepContext st
         "confirm",
         new PromptOptions
         {
-            Prompt = MessageFactory.Text($"{userProfile.Name} さん、年齢を伺ってもよいですか？"),
+            Prompt = MessageFactory.Text($"{userProfile.HandleName} さん、年齢を伺ってもよいですか？"),
             RetryPrompt = MessageFactory.Text("はい、または、いいえでお答えください。"),
         },
         cancellationToken);
@@ -159,8 +159,8 @@ private async Task<DialogTurnResult> ExecuteSummaryStepAsync(WaterfallStepContex
 private static IActivity[] GetSummaryMessages(UserProfile userProfile)
 {
     IActivity summaryMessage = MessageFactory.Text(userProfile.Age == -1
-        ? $"{userProfile.Name} 様、年齢は非公開ですね。"
-        : $"{userProfile.Name} 様、年齢は {userProfile.Age}才ですね。");
+        ? $"{userProfile.HandleName} 様、年齢は非公開ですね。"
+        : $"{userProfile.HandleName} 様、年齢は {userProfile.Age}才ですね。");
     IActivity thanksMessage = MessageFactory.Text("ご入力ありがとうございました。");
     return new[] { summaryMessage, thanksMessage };
 }
@@ -221,7 +221,7 @@ private async Task GetHandleNameAsync(DialogContext dialogContext, DialogTurnRes
         if (dialogTurnResult.Result != null)
         {
             // ハンドルネームを UserState に登録
-            userProfile.Name = (string)dialogTurnResult.Result;
+            userProfile.HandleName = (string)dialogTurnResult.Result;
             await dialogContext.BeginDialogAsync("details", null, cancellationToken); // added
         }
     }
@@ -240,7 +240,7 @@ public async Task SendConversationAsync(ITurnContext turnContext, CancellationTo
     var userProfile = await _accessors.UserProfile.GetAsync(turnContext, () => new UserProfile(), cancellationToken);
 
     // ハンドルネームを UserState に未登録の場合
-    if (userProfile.Name == null)
+    if (userProfile.HandleName == null)
     {
         await GetHandleNameAsync(dialogContext, dialogTurnResult, userProfile, cancellationToken);
     }

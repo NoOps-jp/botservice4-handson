@@ -132,9 +132,14 @@ services.AddSingleton<SampleBotAccessors>(sp =>
 
 ### SampleBotAccessors クラスを SampleBot クラスから利用する
 
-SampleBot クラスから利用してみましょう。更新量が多いですが、意味を理解しながら進めると、単純ないようです。
+SampleBot クラスから利用してみましょう。更新量が多いですが、意味を理解しながら進めると、単純な内容です。
 
 > ハンズオンにて口頭で説明します。
+
+以下コードでは、追加する場所、変更する場所にコメントを付けています。
+
+- `// Added` : コードを追加する部分
+- `// Updated`: コードを変更する部分
 
 ```cs
 using System;
