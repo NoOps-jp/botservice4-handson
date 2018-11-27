@@ -4,7 +4,7 @@
 
 開発のベースとなる IDE です。エディションは不問です。最新の状態に更新しておきましょう。
 
-## .NET COre 2.x
+## .NET Core 2.x
 
 Bot Builder V4 は、.NET Core 2.0 以上の環境で動作します。  
 [公式サイト](https://www.microsoft.com/net/download)から、SDK と Runtime の両方をダウンロード・インストールしましょう。
